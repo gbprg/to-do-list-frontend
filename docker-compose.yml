@@ -1,0 +1,20 @@
+services:
+  nextjs:
+    build:
+      context: .
+    container_name: web
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    volumes:
+      - ./app:/var/www/app
+      - /app/node_modules
+    working_dir: /app
+    command: npm start
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
