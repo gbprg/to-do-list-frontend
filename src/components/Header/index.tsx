@@ -10,13 +10,13 @@ export const Header = () => {
   const { signOut } = useAuth();
   const router = useRouter();
 
+
   function handleOpen() {
     setOpen((prevOpen) => !prevOpen);
   }
-
   return (
     <header className="h-[3.5rem] flex items-center justify-between px-4 bg-white shadow-md">
-      <h1 className="text-lg font-semibold text-gray-800">Sua Lista de Tarefas</h1>
+      <h1 className="text-lg font-semibold text-gray-800">Lista de tarefas</h1>
 
       <div className="relative">
         <div
